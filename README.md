@@ -13,7 +13,6 @@ My personal vim configruations and plugins which I used in my daily job.
    
       ``` 
         git@github.com:joneshsu/jones-vim.git  
-              
       ```
 4. make a symbolic link `.vim` to `jones-vim` that you just cloned, or just rename it to `.vim` also be fine:
 
