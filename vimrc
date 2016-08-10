@@ -24,6 +24,8 @@ call vundle#begin()
 " required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'The-NERD-tree' " The NERD Tree is a filesystem explorer
+
 call vundle#end()            " required
 " filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
