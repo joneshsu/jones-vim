@@ -1,4 +1,4 @@
-"----------------- Vundle ------------------
+"----------------- Vundle ----------------------
 "
 
 set nocompatible             " not compatiable with the old-fashion vi mode
@@ -24,6 +24,8 @@ call vundle#begin()
 " required
 Plugin 'VundleVim/Vundle.vim'
 
+" My Plugins here
+"
 Plugin 'The-NERD-tree' " The NERD Tree is a filesystem explorer
 
 call vundle#end()            " required
@@ -31,7 +33,9 @@ call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
 " filetype plugin on
 
-"----------------- General Setting ------------------
+"----------------- End Vundle ------------------
+
+"----------------- General Setting -------------
 "
 
 syntax on                    " enable syntax highlight
@@ -60,3 +64,14 @@ set fileencoding=utf-8
 
 "
 "----------------- End General -----------------
+
+
+"----------------- Shortcut Settings -----------
+
+" For NERDTree -> Using Control+n to open NERDTree 
+map <C-n> : NERDTree<CR>
+
+" NERDTree will be opened when vim starts up if no files were specified.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
