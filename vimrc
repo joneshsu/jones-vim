@@ -29,6 +29,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'The-NERD-tree'                      " The NERD Tree is a filesystem explorer
 Plugin 'vim-airline/vim-airline'            " Lean & mean status/tabline for vim that's light as air 
 
+" Snippet engines supporting vim-snippets
+Plugin 'honza/vim-snippets'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -50,6 +55,7 @@ set expandtab                " use space instead of tab
 set tabstop=2                " insert 2 spaces for a tab
 set shiftwidth=2             " the number of space characters inserted for indentation
 set autoread                 " auto read when file is changed from outside 
+set noeb vb t_vb=            " disable sound on errors
 set t_Co=256                 " 256 color mode
 set cursorline               " highlight current line
 set showmatch                " Cursor shows matching ) and }
