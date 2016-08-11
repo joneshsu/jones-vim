@@ -26,12 +26,15 @@ Plugin 'VundleVim/Vundle.vim'
 
 " My Plugins here
 "
-Plugin 'The-NERD-tree' " The NERD Tree is a filesystem explorer
+Plugin 'The-NERD-tree'                      " The NERD Tree is a filesystem explorer
+Plugin 'vim-airline/vim-airline'            " Lean & mean status/tabline for vim that's light as air 
+
 
 call vundle#end()            " required
-" filetype plugin indent on    " required
+filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-" filetype plugin on
+filetype plugin on
+filetype indent on
 
 "----------------- End Vundle ------------------
 
