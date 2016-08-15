@@ -84,3 +84,5 @@ map <C-n> : NERDTree<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+" Setting space size for files of Python.
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
