@@ -28,6 +28,7 @@ Plugin 'VundleVim/Vundle.vim'
 "
 Plugin 'The-NERD-tree'                      " The NERD Tree is a filesystem explorer
 Plugin 'vim-airline/vim-airline'            " Lean & mean status/tabline for vim that's light as air 
+Plugin 'kien/ctrlp.vim'                     " Full path fuzzy file, buffer, mru, tag... finder for Vim
 
 " Snippet engines supporting vim-snippets
 Plugin 'honza/vim-snippets'
@@ -86,3 +87,19 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Setting space size for files of Python.
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
+
+" Setting CtrlP
+" Change the default mapping and the default command to invoke CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" When invoked, unless a starting directory is specified, CtrlP will set its
+" local working directory according to this variable
+let g:ctrlp_working_path_mode = 'ra'
+
+" Exclude files and directories using Vim's wildignore and CtrlP's own g:ctrlp_custom_ignore
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|vendor)|(\.(swp|ico|git|svn))$'
+
+let g:ctrlp_dont_split = 'NERD_tree_2'
+let g:ctrlp_show_hidden = 1
+
