@@ -29,6 +29,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'The-NERD-tree'                      " The NERD Tree is a filesystem explorer
 Plugin 'vim-airline/vim-airline'            " Lean & mean status/tabline for vim that's light as air 
 Plugin 'kien/ctrlp.vim'                     " Full path fuzzy file, buffer, mru, tag... finder for Vim
+Plugin 'airblade/vim-gitgutter'             " gitgutter shows a git diff
 
 " Tagbar providers an easy way to brose the tags of the current file and get
 " an overview of its structure.
@@ -117,3 +118,6 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|vendor)|(\.(swp|ico|git|svn))$'
 let g:ctrlp_dont_split = 'NERD_tree_2'
 let g:ctrlp_show_hidden = 1
 
+" Setting vim-gitgutter
+let g:gitgutter_enabled = 1
+highlight clear SignColumn " For the same appearance as your line number column
