@@ -30,6 +30,11 @@ Plugin 'The-NERD-tree'                      " The NERD Tree is a filesystem expl
 Plugin 'vim-airline/vim-airline'            " Lean & mean status/tabline for vim that's light as air 
 Plugin 'kien/ctrlp.vim'                     " Full path fuzzy file, buffer, mru, tag... finder for Vim
 
+" Tagbar providers an easy way to brose the tags of the current file and get
+" an overview of its structure.
+" Dependencies module ctags.
+Plugin 'majutsushi/tagbar' 
+
 " Snippet engines supporting vim-snippets
 Plugin 'honza/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -80,6 +85,15 @@ set fileencoding=utf-8
 
 " For NERDTree -> Using Control+n to open NERDTree 
 map <C-n> : NERDTree<CR>
+
+" For TagbarToggle -> Using Control+c to open TagbarToggle
+nmap <C-\> : TagbarToggle<CR>
+
+" To move effeciently between splits
+nmap gh <C-w>h
+nmap gj <C-w>j
+nmap gk <C-w>k
+nmap gl <C-w>l
 
 " NERDTree will be opened when vim starts up if no files were specified.
 autocmd StdinReadPre * let s:std_in=1
