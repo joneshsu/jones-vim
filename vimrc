@@ -36,6 +36,10 @@ Plugin 'airblade/vim-gitgutter'             " gitgutter shows a git diff
 " Dependencies module ctags.
 Plugin 'majutsushi/tagbar' 
 
+" Vim plugin for the_silver_searcher as 'Ag'
+" Dependencies moudle the_silver_searcher
+Plugin 'rking/ag.vim'
+
 " Snippet engines supporting vim-snippets
 Plugin 'honza/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -95,6 +99,9 @@ nmap gh <C-w>h
 nmap gj <C-w>j
 nmap gk <C-w>k
 nmap gl <C-w>l
+
+" Using Ag! to avoid opening first fetch file
+nmap <c-t> : Ag! ""<left>.
 
 " NERDTree will be opened when vim starts up if no files were specified.
 autocmd StdinReadPre * let s:std_in=1
