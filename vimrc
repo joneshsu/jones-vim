@@ -26,7 +26,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " My Plugins here
 "
-Plugin 'The-NERD-tree'                      " The NERD Tree is a filesystem explorer
+Plugin 'The-NERD-tree'                      " The NERDTree is a filesystem explorer
+Plugin 'Xuyuanp/nerdtree-git-plugin'        " Lets NERDTree supports git information
 Plugin 'vim-airline/vim-airline'            " Lean & mean status/tabline for vim that's light as air 
 Plugin 'kien/ctrlp.vim'                     " Full path fuzzy file, buffer, mru, tag... finder for Vim
 Plugin 'airblade/vim-gitgutter'             " gitgutter shows a git diff
@@ -106,6 +107,26 @@ nmap <c-t> : Ag! ""<left>.
 " NERDTree will be opened when vim starts up if no files were specified.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Display numbers of line
+let NERDTreeShowLineNumbers=1
+let NERDTreeAutoCenter=1
+let NERDTreeWinSize=31
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swp']
+let NERDTreeShowBookmarks=1
+
+let g:NERDTreeIndicatorMapCustom = {
+  \ "Modified"   : "✹",
+  \ "Staged"     : "✚",
+  \ "Untracked"  : "✭",
+  \ "Renamed"    : "➜",
+  \ "Unmerged"   : "═",
+  \ "Deleted"    : "✖",
+  \ "Dirty"      : "✗",
+  \ "Clean"      : "✔︎",
+  \ "Unknown"    : "?",
+  \ }
 
 " Setting space size for files of Python.
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
