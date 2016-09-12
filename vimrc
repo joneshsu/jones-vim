@@ -47,6 +47,9 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 
+" Vim Theme
+Plugin 'dracula/vim'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -59,6 +62,7 @@ filetype indent on
 "
 
 syntax on                    " enable syntax highlight
+color dracula
 
 set history=50               " keep 50 lines of command line history
 set number                   " enable line numbers
