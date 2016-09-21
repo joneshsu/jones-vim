@@ -29,3 +29,10 @@ My personal vim configurations and plugins which I used in my daily job.
       ```
         :BundleInstall
       ```
+7. install YouCompleteMe plugins with MacOS, please refer below
+
+      ```
+        1. brew install cmake
+        2. brew install macvim
+        3. alias vim='mvim -v' 
+      ```

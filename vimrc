@@ -25,7 +25,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " My Plugins here
-"
 Plugin 'The-NERD-tree'                      " The NERDTree is a filesystem explorer
 Plugin 'Xuyuanp/nerdtree-git-plugin'        " Lets NERDTree supports git information
 Plugin 'vim-airline/vim-airline'            " Lean & mean status/tabline for vim that's light as air 
@@ -46,6 +45,10 @@ Plugin 'honza/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
+
+" Vim autocomplete
+" Run /bundle/YouCompleteMe/install.py -all 
+Plugin 'Valloric/YouCompleteMe'
 
 " Vim Theme
 Plugin 'dracula/vim'
