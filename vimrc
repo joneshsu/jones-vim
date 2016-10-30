@@ -37,7 +37,7 @@ Plugin 'airblade/vim-gitgutter'             " gitgutter shows a git diff
 Plugin 'majutsushi/tagbar' 
 
 " Vim plugin for the_silver_searcher as 'Ag'
-" Dependencies moudle the_silver_searcher
+" Dependencies module the_silver_searcher
 Plugin 'rking/ag.vim'
 
 " Snippet engines supporting vim-snippets
@@ -120,7 +120,7 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeAutoCenter=1
 let NERDTreeWinSize=31
 let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.pyc', '\~$', '\.swp']
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swp', '\.DS_Store']
 let NERDTreeShowBookmarks=1
 
 let g:NERDTreeIndicatorMapCustom = {
@@ -156,3 +156,14 @@ let g:ctrlp_show_hidden = 1
 " Setting vim-gitgutter
 let g:gitgutter_enabled = 1
 highlight clear SignColumn " For the same appearance as your line number column
+
+" Let ag to always start searching from project root
+let g:ag_working_path_mode="r"
+
+" Let disable preview window when auto_complete
+let g:ycm_add_preview_to_completeopt = 0
+set completeopt-=preview
+
+" Let auto close preview window when auto_complete 
+" let g:ycm_autoclose_preview_window_after_completion = 1
+" let g:ycm_autoclose_preview_window_after_insertion = 1
