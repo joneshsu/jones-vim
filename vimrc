@@ -136,7 +136,8 @@ let g:NERDTreeIndicatorMapCustom = {
   \ }
 
 " Setting space size for files of Python.
-autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
+autocmd Filetype python setlocal expandtab smarttab tabstop=4 shiftwidth=4 softtabstop=4
+nnoremap <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 
 " Setting CtrlP
 " Change the default mapping and the default command to invoke CtrlP
