@@ -111,6 +111,9 @@ nmap gl <C-w>l
 " Using Ag! to avoid opening first fetch file
 nmap <c-t> : Ag! ""<left>.
 
+" Replace Esc to jj on insert mode
+imap jj <Esc>
+
 " NERDTree will be opened when vim starts up if no files were specified.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
