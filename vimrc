@@ -114,6 +114,9 @@ nmap <c-t> : Ag! ""<left>.
 " Replace Esc to jj on insert mode
 imap jj <Esc>
 
+" Disable mouse clicks in vim
+set mouse=c
+
 " NERDTree will be opened when vim starts up if no files were specified.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
