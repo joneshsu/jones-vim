@@ -41,10 +41,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'rking/ag.vim'
 
 " Snippet engines supporting vim-snippets
-Plugin 'honza/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
 
 " Vim autocomplete
 " Run /bundle/YouCompleteMe/install.py -all 
@@ -52,6 +50,15 @@ Plugin 'Valloric/YouCompleteMe'
 
 " Vim Theme
 Plugin 'dracula/vim'
+
+Plugin 'fatih/vim-go'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'Chiel92/vim-autoformat'
+
+" Vim plugin for Terraform, please refer
+" https://github.com/hashivim/vim-terraform to install others resources
+Plugin 'hashivim/vim-terraform'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -126,10 +133,10 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeAutoCenter=1
 let NERDTreeWinSize=31
 let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.pyc', '\~$', '\.swp', '\.DS_Store']
+let NERDTreeIgnore=['\.pyc', '\~$', '\.DS_Store']
 let NERDTreeShowBookmarks=1
 
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
   \ "Modified"   : "✹",
   \ "Staged"     : "✚",
   \ "Untracked"  : "✭",
@@ -171,6 +178,34 @@ let g:ag_working_path_mode="r"
 let g:ycm_add_preview_to_completeopt = 0
 set completeopt-=preview
 
+" UltiSnips settings
+ let g:UltiSnipsExpandTrigger="<c-j>"
+
 " Let auto close preview window when auto_complete 
 " let g:ycm_autoclose_preview_window_after_completion = 1
 " let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" set folding 
+set foldmethod=syntax
+set foldlevelstart=1
+set foldmethod=indent
+set foldnestmax=2
+
+let javaScript_fold=1       " JavaScript
+let perl_fold=1             " Perl
+let php_folding=1           " PHP
+let r_syntax_folding=1      " R
+let ruby_fold=1             " Ruby
+let sh_fold_enabled=1       " sh
+let vimsyn_folding='af'     " Vim script
+let xml_syntax_folding=1    " XML
+
+
+" set Autformat
+noremap <F3> :Autoformat<CR>
+"au BufWrite * :Autoformat
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
+autocmd FileType vim,tex let b:autoformat_autoindent=0
+set runtimepath^=~/.vim/bundle/ag
